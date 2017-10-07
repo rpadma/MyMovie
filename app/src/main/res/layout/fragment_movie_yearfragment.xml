@@ -1,0 +1,260 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="f1.com.example.rohit.homework2.MovieYearfragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            >
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                />
+            <TextView
+                android:text="@string/Moviebyyeartitlelbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_weight="6"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+
+            >
+            <TextView
+                android:text="@string/titlelbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:layout_weight="2"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/mytitle"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            >
+
+            <TextView
+                android:text="@string/Deslbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/mydesc"
+                android:layout_weight="1"
+                android:maxLength="1000"
+                android:background="@drawable/box"
+                android:textSize="20dp"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:text="@string/Genrelbl"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/mygenre"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:textSize="20dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:text="@string/Ratinglbl"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/mygrating"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:textSize="20dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:text="@string/Yearlbl"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/myyear"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:textSize="20dp"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:text="@string/imbdlbl"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/myimdb"
+                android:layout_weight="10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="12"
+            android:layout_marginTop="50dp"
+            >
+            <Button
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/first"
+                android:id="@+id/btnmyfirst"
+
+                />
+            <Button
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/previous"
+                android:id="@+id/btnmyprevious"
+
+                />
+
+            <Button
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:text="@string/btnfinishlbl"
+                android:id="@+id/btnmyfinish"
+                />
+
+            <Button
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/next"
+                android:id="@+id/btnmynext"
+
+                />
+
+            <Button
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/last"
+                android:id="@+id/btnmylast"
+                android:onClick="mylastclick"
+                />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
+
+</FrameLayout>

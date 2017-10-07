@@ -1,0 +1,244 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="f1.com.example.rohit.homework2.Editfragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        >
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/namelbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView"
+                android:textSize="20dp"
+                android:layout_weight="3"
+                android:textColor="#000000"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editedtxtname"
+                android:layout_weight="7"
+                android:textSize="20dp"
+                android:maxLength="50"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:text="@string/Deslbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewdes"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20dp"
+                android:textColor="#000000"
+
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            >
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editedtxdesc"
+                android:layout_weight="1"
+                android:maxLength="1000"
+                android:gravity="top"
+                android:background="@drawable/box"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+
+            <TextView
+                android:text="@string/Genrelbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textSize="20dp"
+                android:layout_weight="3"
+                android:textColor="#000000"
+                />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editspgenre"
+                android:layout_weight="7"
+
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Ratinglbl"
+                android:textSize="20dp"
+                android:layout_weight="2"
+                android:textColor="#000000"
+                />
+
+
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editSbrating"
+                android:layout_weight="7"
+                android:layout_marginTop="8dp"
+                android:max="5" />
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editratingval"
+                android:layout_weight="1"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="@string/Yearlbl"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:id="@+id/editedtxtyear"
+                android:textSize="20dp"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="@string/imbdlbl"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:id="@+id/editedtxtimdblink"
+                android:textSize="20dp"
+
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                />
+            <Button
+                android:text="@string/editbtnlbl"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/btneditmovie"
+                android:layout_marginTop="10dp"
+                android:onClick="saveEdit"
+                />
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+
+                />
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
+
+</FrameLayout>

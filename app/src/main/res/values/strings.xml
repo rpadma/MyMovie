@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">My Favorite Movies</string>
+    <string name="btnlbladd">Add Movie</string>
+    <string name="btnlbledit">Edit</string>
+    <string name="btnlbldelete">Delete Movie</string>
+    <string name="btnlblshowlist">Show List by Year</string>
+    <string name="btnlblshowbyrating">Show List by Rating</string>
+    <string name="addactivitylbl">Add Movie</string>
+    <string name="Editactivitylbl">Edit Movie</string>
+    <string name="showbyearlbl">Movies by Year</string>
+    <string name="showbyratinglbl">Movies by Rating</string>
+    <string name="namelbl">Name:</string>
+    <string name="Deslbl">Description:</string>
+    <string name="Genrelbl">Genre:</string>
+    <string name="Ratinglbl">Rating:</string>
+    <string name="Yearlbl">Year:</string>
+    <string name="imbdlbl">IMDB:</string>
+    <string name="editbtnlbl">Save Changes</string>
+    <string name="title_activity_movie_year">MovieYearActivity</string>
+    <string name="title_activity_movie_rating">MovieRatingActivity</string>
+    <string name="Moviebyyeartitlelbl">Movies by Year</string>
+    <string name="Moviebyratingtitlelbl">Movie by Rating</string>
+    <string name="titlelbl">Title:</string>
+    <string name="btnfinishlbl">Finish</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
