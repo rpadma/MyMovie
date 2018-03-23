@@ -19,6 +19,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.replaceText;
@@ -39,6 +40,8 @@ public class MainActivityTest2 {
 
     @Test
     public void mainActivityTest2() {
+
+
         ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.btnadd), withText("Add Movie"),
                         childAtPosition(
@@ -67,37 +70,7 @@ public class MainActivityTest2 {
                                         2),
                                 0),
                         isDisplayed()));
-        appCompatEditText2.perform(click());
-
-        ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.edtxdesc),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.TableLayout")),
-                                        2),
-                                0),
-                        isDisplayed()));
-        appCompatEditText3.perform(replaceText("m"), closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.edtxtyear),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.TableLayout")),
-                                        5),
-                                1),
-                        isDisplayed()));
-        appCompatEditText4.perform(replaceText("2015"), closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.edtxtimdblink),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.TableLayout")),
-                                        6),
-                                1),
-                        isDisplayed()));
-        appCompatEditText5.perform(replaceText("89"), closeSoftKeyboard());
+        appCompatEditText2.perform(replaceText("m"), closeSoftKeyboard());
 
         ViewInteraction appCompatSpinner = onView(
                 allOf(withId(R.id.spgenre),
@@ -113,8 +86,28 @@ public class MainActivityTest2 {
                 .inAdapterView(childAtPosition(
                         withClassName(is("android.widget.PopupWindow$PopupBackgroundView")),
                         0))
-                .atPosition(2);
+                .atPosition(1);
         appCompatCheckedTextView.perform(click());
+
+        ViewInteraction appCompatEditText3 = onView(
+                allOf(withId(R.id.edtxtyear),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.TableLayout")),
+                                        5),
+                                1),
+                        isDisplayed()));
+        appCompatEditText3.perform(replaceText("1992"), closeSoftKeyboard());
+
+        ViewInteraction appCompatEditText4 = onView(
+                allOf(withId(R.id.edtxtimdblink),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.TableLayout")),
+                                        6),
+                                1),
+                        isDisplayed()));
+        appCompatEditText4.perform(replaceText("b"), closeSoftKeyboard());
 
         ViewInteraction appCompatButton2 = onView(
                 allOf(withId(R.id.btnaddmovie), withText("Add Movie"),
@@ -126,9 +119,99 @@ public class MainActivityTest2 {
                         isDisplayed()));
         appCompatButton2.perform(click());
 
+        ViewInteraction appCompatButton3 = onView(
+                allOf(withId(R.id.btnedit), withText("Edit"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.FrameLayout")),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatButton3.perform(click());
+
+        DataInteraction appCompatTextView = onData(anything())
+                .inAdapterView(allOf(withId(R.id.select_dialog_listview),
+                        childAtPosition(
+                                withId(R.id.contentPanel),
+                                0)))
+                .atPosition(0);
+        appCompatTextView.perform(click());
+
+        ViewInteraction appCompatEditText5 = onView(
+                allOf(withId(R.id.editedtxtname), withText("m"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.TableLayout")),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatEditText5.perform(replaceText("moviewname"));
+
+        ViewInteraction appCompatEditText6 = onView(
+                allOf(withId(R.id.editedtxtname), withText("moviewname"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.TableLayout")),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatEditText6.perform(closeSoftKeyboard());
+
+        ViewInteraction appCompatButton4 = onView(
+                allOf(withId(R.id.btneditmovie), withText("Save Changes"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.TableLayout")),
+                                        7),
+                                1),
+                        isDisplayed()));
+        appCompatButton4.perform(click());
+
+        ViewInteraction appCompatButton5 = onView(
+                allOf(withId(R.id.btnshowlist), withText("Show List by Year"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.FrameLayout")),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatButton5.perform(click());
+
+        pressBack();
+
+        ViewInteraction appCompatButton6 = onView(
+                allOf(withId(R.id.btnshowlistR), withText("Show List by Rating"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.FrameLayout")),
+                                        0),
+                                4),
+                        isDisplayed()));
+        appCompatButton6.perform(click());
+
+        pressBack();
+
+        ViewInteraction appCompatButton7 = onView(
+                allOf(withId(R.id.btndelete), withText("Delete Movie"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.FrameLayout")),
+                                        0),
+                                2),
+                        isDisplayed()));
+        appCompatButton7.perform(click());
+
+        DataInteraction appCompatTextView2 = onData(anything())
+                .inAdapterView(allOf(withId(R.id.select_dialog_listview),
+                        childAtPosition(
+                                withId(R.id.contentPanel),
+                                0)))
+                .atPosition(0);
+        appCompatTextView2.perform(click());
+
     }
 
-    public static Matcher<View> childAtPosition(
+    private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 
         return new TypeSafeMatcher<View>() {

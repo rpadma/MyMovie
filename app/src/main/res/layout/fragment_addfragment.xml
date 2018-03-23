@@ -234,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btnaddmovie"
                     android:layout_marginTop="10dp"
-                    android:onClick="addMovie"
+
                     />
                 <TextView
                     android:layout_weight="2"

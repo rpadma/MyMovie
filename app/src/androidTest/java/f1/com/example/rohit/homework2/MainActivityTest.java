@@ -22,9 +22,11 @@ import org.hamcrest.Matchers;
 import org.hamcrest.TypeSafeMatcher;
 import org.hamcrest.core.IsInstanceOf;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
@@ -46,6 +48,7 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MainActivityTest {
 
     private String moviename;
@@ -68,10 +71,11 @@ public class MainActivityTest {
 
     }
 
+
     @Test
     public void mainActivityTest() {
 
-        onView(allOf(withId(R.id.btnadd), withText("Add Movie"),
+         onView(allOf(withId(R.id.btnadd), withText("Add Movie"),
                         isDisplayed())).perform(click());
 
         onView(allOf(withId(R.id.edtxtname),
@@ -96,7 +100,17 @@ public class MainActivityTest {
                 isDisplayed())).perform(click());
 
 
+
+        onView(withId(R.id.btnedit)).perform(click());
+        onData(anything())
+                .inAdapterView(allOf(withId(R.id.select_dialog_listview),isDisplayed())).atPosition(0).perform(click());
+
+
+
     }
+
+
+
 
     public static ViewAction setPosition(final int pos)
     {
